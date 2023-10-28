@@ -1,0 +1,110 @@
+nav{
+    width: 100%;
+    .nav-content{
+        margin: 0em 1.5em;
+        padding: 1em;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .brand{
+            display: flex;
+            align-items: flex-end;
+            h1{
+                opacity: 0.9;
+                margin: 5px;
+            }
+        }
+        .menu{
+            display: flex;
+            align-items: flex-end;
+            padding-top: 20px ;
+            padding-bottom: 10px;
+            ul{
+                @extend .flex-central;
+                flex-wrap: wrap;
+                list-style: none;
+                li{
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin: 0px 10px;
+                    a{
+                        text-decoration: none;
+                        color: var(--contrast-color);
+                        &:hover{
+                            color: var(--main-color);
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    margin-bottom: 2vh;
+}
+
+#newsletter{
+    width: 80%;
+    padding: 2.5em;
+    margin: 2em auto 2em auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px rgba(0,0,0, 0.6);
+    @extend .flex-central;
+    flex-direction: column;
+    background-color: var(--bg-secondary-color);
+    h2,p{
+        margin: 10px;
+        text-align: center;
+    }
+    h2{
+        font-size: 2em;
+        color: var(--main-secondary-color);
+    }
+    p{
+        font-size: 1.1em;
+    }
+    form{
+        @extend .flex-central;
+        flex-wrap: wrap;
+        input,button{
+            margin: 10px;
+            padding: 10px 20px;
+            border: 1px solid var(--main-color);
+            border-radius: 15px;
+            font-weight: bold;
+        }
+        input{
+            background-color: var(--bg-main-color);
+            max-width: 18em;
+            &:focus{
+                outline: none;
+            }
+        }
+        button{
+            color: var(--bg-secondary-color);
+            background-color: var(--main-color);
+            cursor: pointer;
+            &:hover{
+                padding: 10px 30px;
+                transition: 0.4s;
+            }
+        }
+    }
+}
+
+footer{
+    min-height: 10vh;
+    text-align: center;
+    padding-bottom: 1em;
+    h4{
+        margin: 15px;
+        a{
+            color: var(--main-secondary-color);
+            text-decoration: none;
+            &:hover{
+                font-size: 14px;
+                text-decoration: underline;
+                transition: 0.4s;
+            }
+        }
+    }
+}

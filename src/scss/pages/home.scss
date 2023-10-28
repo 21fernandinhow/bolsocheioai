@@ -1,0 +1,11 @@
+#home{
+    @extend .flex-central;
+    flex-direction: column;
+    .header{
+        margin-bottom: 10vh;
+        text-align: center;
+        h2{
+            margin: 10px;
+        }
+    }
+}
