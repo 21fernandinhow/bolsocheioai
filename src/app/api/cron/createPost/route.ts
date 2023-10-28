@@ -1,4 +1,5 @@
-import { NextResponse } from "next/server";
+export const dynamic = 'force-dynamic'
+
 import Titles from './postTitles.json'
 
 const blogApiKey = process.env.BLOG_API_KEY!;
