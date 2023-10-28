@@ -77,7 +77,6 @@ const savePost = async (post:{title:any, content:any}) => {
 export async function GET ()  {
     console.log('Iniciando cron jobs...')
     const postTitle = await getPostTitle();
-    console.log(`Just a test: ${postTitle}`)
     const postContent = await generatePost(`${postTitle}`);
     const createdPost = {
         title: postTitle,
