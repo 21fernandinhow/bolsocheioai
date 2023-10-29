@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 import Newsletter from '@/components/Newsletter'
 
 export const metadata: Metadata = {
-  title: 'Bol$o Cheio AI',
+  title: 'Bolso Cheio AI',
   description: 'Um blog de finanças com conteúdo 100% feito por inteligência artificial',
 }
 

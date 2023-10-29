@@ -13,7 +13,7 @@ export default function Navbar() {
                         />
                     </a>
 
-                    <h1>Bol$o<br/>Cheio A.I.</h1>
+                    <h1>Bolso<br/>Cheio A.I.</h1>
                 </div>
                 <div className="menu">
                     <ul>

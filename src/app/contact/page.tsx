@@ -1,8 +1,8 @@
 import ContactForm from "@/components/ContactForm";
 
 export const metadata = {
-    title: "Contato | Bol$o Cheio A.I",
-    description: `Entre em contato com Bol$o Cheio A.I, seu blog de finanças com conteúdo 100% produzido por inteligência artificial!`,
+    title: "Contato | Bolso Cheio A.I",
+    description: `Entre em contato com Bolso Cheio A.I, seu blog de finanças com conteúdo 100% produzido por inteligência artificial!`,
 }
 
 export default function Contact() {
