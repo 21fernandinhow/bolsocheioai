@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Navbar from "@/components/Navbar"
-import "../css/style.css"
+import "@/css/style.css"
 import Footer from '@/components/Footer'
 import Newsletter from '@/components/Newsletter'
 

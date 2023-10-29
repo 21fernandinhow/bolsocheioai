@@ -54,12 +54,6 @@ body::-webkit-scrollbar-thumb {
     color: var(--bg-main-color);
 }
 
-hr{
-    border-color: none;
-    border-top: 1px solid var(--main-secondary-color);
-    margin: 1em 1.5em;
-}
-
 .page-container{
     min-height: 40vh;
     width: 80%;
@@ -69,5 +63,27 @@ hr{
     }
     p{
         font-size: 1.1em;
+    }
+}
+
+hr{
+    border-color: none;
+    border-top: 1px solid var(--main-secondary-color);
+    margin: 1em 1.5em;
+}
+
+button{
+    margin: 10px;
+    padding: 10px 20px;
+    border: 1px solid var(--main-color);
+    border-radius: 15px;
+    font-weight: bold;
+    color: var(--bg-secondary-color);
+    background-color: var(--main-color);
+    cursor: pointer;
+    &:hover{
+        padding: 10px 30px;
+        background-color: var(--main-secondary-color);
+        transition: 0.4s;
     }
 }

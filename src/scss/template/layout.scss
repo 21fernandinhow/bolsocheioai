@@ -45,7 +45,7 @@ nav{
 #newsletter{
     width: 80%;
     padding: 2.5em;
-    margin: 2em auto 2em auto;
+    margin: 4.5em auto 4.5em auto;
     border-radius: 15px;
     box-shadow: 0px 0px 5px rgba(0,0,0, 0.6);
     @extend .flex-central;
@@ -65,27 +65,16 @@ nav{
     form{
         @extend .flex-central;
         flex-wrap: wrap;
-        input,button{
+        input{
             margin: 10px;
             padding: 10px 20px;
             border: 1px solid var(--main-color);
             border-radius: 15px;
             font-weight: bold;
-        }
-        input{
             background-color: var(--bg-main-color);
             max-width: 18em;
             &:focus{
                 outline: none;
-            }
-        }
-        button{
-            color: var(--bg-secondary-color);
-            background-color: var(--main-color);
-            cursor: pointer;
-            &:hover{
-                padding: 10px 30px;
-                transition: 0.4s;
             }
         }
     }
