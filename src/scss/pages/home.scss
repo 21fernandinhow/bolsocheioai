@@ -2,10 +2,47 @@
     @extend .flex-central;
     flex-direction: column;
     .header{
-        margin-bottom: 10vh;
+        padding-bottom: 2em;
         text-align: center;
         h2{
             margin: 10px;
         }
+        width: 100%;
+    }
+    .posts{
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+        width: 100%;
+        .post-box{
+            border: 1px solid var(--main-color);
+            border-radius: 15px;
+            padding: 1.5em 1.5em 2.5em 1.5em;
+            margin: 1.5em;
+            width: 20em;
+            h3,h4,p,a{
+                margin: 10px;
+            }
+            h4{
+                color: var(--main-secondary-color);
+            }
+            p{
+                margin-bottom: 30px;
+            }
+            a{
+                @extend .btn;
+                text-decoration: none;
+            }
+            &:hover{
+                transform: translateY(-10px);
+                box-shadow: 1px 2px 3px rgba(0,0,0, 0.4);
+                transition: 0.4s;
+            }
+        }
+    }
+    .pagination{
+        @extend .flex-central;
+        flex-wrap: wrap;
     }
 }

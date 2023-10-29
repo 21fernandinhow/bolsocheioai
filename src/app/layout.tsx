@@ -18,8 +18,10 @@ export default function RootLayout({
     <html lang="pt-br">
       <body data-theme={'light'}>
         <Navbar/>
-        {children}
-        <Newsletter/>
+        <main>
+          {children}
+          <Newsletter/>
+        </main>
         <Footer/>
       </body>
     </html>

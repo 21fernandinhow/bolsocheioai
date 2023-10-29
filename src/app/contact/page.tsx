@@ -8,7 +8,7 @@ export const metadata = {
 export default function Contact() {
 
     return (
-      <section className="page-container" id="contact">
+      <section id="contact">
         <h2>Contato</h2>
         <p>Envie sua mensagem para nós através do formulário abaixo. Estamos sempre abertos a ouvir feedbacks, avisos, propostas ou sugestões!</p>
         <ContactForm/>
