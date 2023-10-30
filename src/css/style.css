@@ -157,6 +157,9 @@ footer h4 a:hover {
   margin-top: 15px;
 }
 
+#contact h2 {
+  margin-bottom: 15px;
+}
 #contact form {
   display: flex;
   flex-direction: column;
