@@ -1,8 +1,12 @@
 import type { Metadata } from 'next'
 import Navbar from "@/components/Navbar"
-import "@/css/style.css"
 import Footer from '@/components/Footer'
 import Newsletter from '@/components/Newsletter'
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@/css/style.css"
+
+config.autoAddCss = false;
 
 export const metadata: Metadata = {
   title: 'Bolso Cheio AI',

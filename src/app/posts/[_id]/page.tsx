@@ -16,9 +16,9 @@ async function getPostById(_id:string) {
 };
 
 export default async function PostPage({ params }: { params: { _id: string } }) {
-    const post = await getPostById(params._id);
 
-    const formattedDate = new Date(post.date).toLocaleDateString();
+    const post = await getPostById(params._id);
+    const formattedDate = new Date(post.date).toLocaleDateString('pt-BR');
     
     return(
         <section id="post">

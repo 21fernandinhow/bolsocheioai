@@ -1,4 +1,7 @@
 import Image from "next/image"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import Link from "next/link";
 
 export default function Navbar() {
     return(
@@ -17,9 +20,14 @@ export default function Navbar() {
                 </div>
                 <div className="menu">
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about">Sobre</a></li>
-                        <li><a href="/contact">Contato</a></li>
+                        <li><Link href="/">Home</Link></li>
+                        <li><Link href="/about">Sobre</Link></li>
+                        <li><Link href="/contact">Contato</Link></li>
+                        <li>
+                            <Link href="https://www.instagram.com/bolsocheio.ai" target="_blank" rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={faInstagram} />
+                            </Link>
+                        </li>
                     </ul>
                 </div>
             </div>

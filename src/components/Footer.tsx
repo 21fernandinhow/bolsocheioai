@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function Footer() {
     return(
         <footer>
@@ -7,7 +9,7 @@ export default function Footer() {
                 <br/><br/>
                 O intuito deste blog é informar e ensinar sobre educação financeira de forma inovadora, com o melhor da tecnologia disponível.</h4>
             <h4>
-                <a href="https://fernandocarvalhodev.com" rel="noopener noreferrer" target="_blank">Desenvolvido por Fernando Carvalho.</a>    
+                <Link href="https://fernandocarvalhodev.com" rel="noopener noreferrer" target="_blank">Desenvolvido por Fernando Carvalho.</Link>    
             </h4>
             <h6>Copyright Bolso Cheio A.I. 2023</h6>
         </footer>
