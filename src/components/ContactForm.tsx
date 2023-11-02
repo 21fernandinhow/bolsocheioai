@@ -1,9 +1,7 @@
-'use client'
-
 export default function ContactForm() {
     
     return(
-        <form action="https://formsubmit.co/21fernandinhow@gmail.com" method="POST">
+        <form action="https://formsubmit.co/bolsocheioai@gmail.com" method="POST">
 
             <input type="text" name="name" id="name" placeholder="Nome: " required/>
 
