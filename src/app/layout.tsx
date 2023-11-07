@@ -5,6 +5,7 @@ import Newsletter from '@/components/Newsletter'
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@/css/style.css"
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 
 config.autoAddCss = false;
 
@@ -20,7 +21,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body data-theme={'light'}>
+      <body>
+        <GoogleAnalytics/>
         <Navbar/>
         <main>
           {children}
