@@ -41,7 +41,7 @@ export default function PostList({posts}:PostListProps) {
 
             </section>
 
-            {posts.length>4 && (
+            {posts.length>5 && (
                 <section className="pagination">
                     {postsIndex>0 && (
                         <button onClick={previousPosts}>Página Anterior</button>
