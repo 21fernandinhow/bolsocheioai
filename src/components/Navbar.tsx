@@ -8,13 +8,13 @@ export default function Navbar() {
         <nav>
             <div className="nav-content">
                 <div className="brand">
-                    <a href="#">
+                    <Link href="/">
                         <Image src={'/logo.png'}
                             width={120}
                             height={80}
                             alt={"Bol$o Cheio AI"}          
                         />
-                    </a>
+                    </Link>
 
                     <h1>Bolso<br/>Cheio A.I.</h1>
                 </div>
