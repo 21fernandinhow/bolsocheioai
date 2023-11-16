@@ -11,11 +11,10 @@ export default function Newsletter() {
 
         event.preventDefault()
 
-        const response = await fetch(`${process.env.NEXT_PUBLIC_LEADS_URL}`, {
+        const response = await fetch('/api', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
-              'x-api-key': `${process.env.NEXT_PUBLIC_API_KEY}`,
             },
             body: JSON.stringify({
               name: name,
@@ -23,7 +22,7 @@ export default function Newsletter() {
             }),
         })
 
-        if(response.ok){
+        if(response.status === 200){
             alert('Inscrição efetuada com sucesso!')
         } else {
             alert('Erro ao efetuar inscrição. Atualize a página e tente novamente')
