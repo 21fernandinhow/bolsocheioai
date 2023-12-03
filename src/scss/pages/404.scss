@@ -1,0 +1,12 @@
+#not-found{
+    min-height: 50vh;
+    @extend .flex-central;
+    flex-direction: column;
+    text-align: center;
+    h1{
+        font-size: 2.2em;
+    }
+    h1,p{
+        margin-bottom: 10px;
+    }
+}

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { notFound } from 'next/navigation';
 
 export async function generateMetadata({ params }: { params: { _id: string }}):Promise<Metadata>{
 
@@ -21,7 +22,7 @@ async function getPostById(_id:string) {
     });
   
     if (!response.ok) {
-        throw new Error('Erro ao buscar posts')
+        return notFound()
     }
   
     return response.json();

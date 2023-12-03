@@ -4,6 +4,7 @@
 @import './pages/about.scss';
 @import './pages/contact.scss';
 @import './pages/post.scss';
+@import './pages/404.scss';
 
 //Colors
 :root{
@@ -24,16 +25,26 @@
 .btn{
     margin: 10px;
     padding: 10px 20px;
-    border: 1px solid var(--main-color);
+    border: none;
     border-radius: 15px;
     font-weight: bold;
     color: var(--bg-secondary-color);
     background-color: var(--main-color);
     cursor: pointer;
+    text-decoration: none;
     &:hover{
         padding: 10px 30px;
         background-color: var(--main-secondary-color);
         transition: 0.4s;
+    }
+}
+
+.btn-bg{
+    @extend .btn;
+    font-size: 1.1em;
+    padding: 12px 24px;
+    &:hover{
+        padding: 12px 36px;
     }
 }
 

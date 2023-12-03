@@ -194,6 +194,18 @@ footer h4 a:hover {
   margin-bottom: 15px;
 }
 
+#not-found {
+  min-height: 50vh;
+  flex-direction: column;
+  text-align: center;
+}
+#not-found h1 {
+  font-size: 2.2em;
+}
+#not-found h1, #not-found p {
+  margin-bottom: 10px;
+}
+
 :root {
   --main-color: #36b367;
   --main-secondary-color: #1d7044;
@@ -202,26 +214,35 @@ footer h4 a:hover {
   --contrast-color: #181821;
 }
 
-.flex-central, nav .nav-content .menu ul, main, main #newsletter, main #newsletter form, #home, #home .pagination {
+.flex-central, nav .nav-content .menu ul, main, main #newsletter, main #newsletter form, #home, #home .pagination, #not-found {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.btn, button, #home .posts .post-box a {
+.btn, button, .btn-bg, #home .posts .post-box a {
   margin: 10px;
   padding: 10px 20px;
-  border: 1px solid var(--main-color);
+  border: none;
   border-radius: 15px;
   font-weight: bold;
   color: var(--bg-secondary-color);
   background-color: var(--main-color);
   cursor: pointer;
+  text-decoration: none;
 }
-.btn:hover, button:hover, #home .posts .post-box a:hover {
+.btn:hover, button:hover, .btn-bg:hover, #home .posts .post-box a:hover {
   padding: 10px 30px;
   background-color: var(--main-secondary-color);
   transition: 0.4s;
+}
+
+.btn-bg {
+  font-size: 1.1em;
+  padding: 12px 24px;
+}
+.btn-bg:hover {
+  padding: 12px 36px;
 }
 
 * {
