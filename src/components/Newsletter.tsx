@@ -52,9 +52,9 @@ export default function Newsletter() {
                     
                     <form onSubmit={handleSubmit}>
 
-                        <input type="text" placeholder="Nome" id="name" onChange={(e) => setName(e.target.value)} value={name} required />
+                        <input type="text" placeholder="Nome" id="name" onChange={(e) => setName(e.target.value)} required />
 
-                        <input type="email" placeholder="E-mail" id="email" onChange={(e) => setEmail(e.target.value)} value={email} required />
+                        <input type="email" placeholder="E-mail" id="email" onChange={(e) => setEmail(e.target.value)} required />
 
                         <button type="submit">Enviar</button>
 
