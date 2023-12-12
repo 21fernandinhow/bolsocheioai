@@ -14,9 +14,8 @@ export default function Navbar() {
                             height={80}
                             alt={"Bol$o Cheio AI"}          
                         />
+                        <h1>Bolso<br/>Cheio A.I.</h1>
                     </Link>
-
-                    <h1>Bolso<br/>Cheio A.I.</h1>
                 </div>
                 <div className="menu">
                     <ul>

@@ -9,13 +9,20 @@ nav .nav-content {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-nav .nav-content .brand {
+nav .nav-content .brand a {
   display: flex;
   align-items: flex-end;
+  text-decoration: none;
+  color: var(--contrast-color);
 }
-nav .nav-content .brand h1 {
+nav .nav-content .brand a h1 {
   opacity: 0.9;
   margin: 5px;
+}
+nav .nav-content .brand a h1:hover {
+  color: var(--main-secondary-color);
+  text-decoration: underline;
+  transition: 0.4s;
 }
 nav .nav-content .menu {
   display: flex;
@@ -44,6 +51,7 @@ nav .nav-content .menu ul li a:hover {
 main {
   padding: 2vh 10%;
   flex-direction: column;
+  min-height: 70vh;
 }
 main section {
   width: 100%;
@@ -87,6 +95,10 @@ main #newsletter form input {
 }
 main #newsletter form input:focus {
   outline: none;
+}
+main #newsletter .success-icon {
+  font-size: 2.2em;
+  color: var(--main-secondary-color);
 }
 
 footer {
