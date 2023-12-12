@@ -3,12 +3,14 @@
 import { useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
+import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 export default function Newsletter() {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [subscribed, setSubscribed] = useState(false);
+    const [subscribeError, setSubscribeError] = useState(false);
 
     const handleSubmit = async (event: any) => {
 
@@ -28,7 +30,7 @@ export default function Newsletter() {
         if(response.status === 200){
             setSubscribed(true)
         } else {
-            alert('Erro ao efetuar inscrição. Atualize a página e tente novamente')
+            setSubscribeError(true)
         }
         
     }
@@ -57,6 +59,12 @@ export default function Newsletter() {
                         <button type="submit">Enviar</button>
 
                     </form>
+                    {
+                        subscribeError ?
+                        <h4 className="error-message"><FontAwesomeIcon icon={faCircleXmark} /> Erro ao efetuar inscrição. Atualize a página e tente novamente</h4>
+                        :
+                        null
+                    }
                 </>
             }
             
