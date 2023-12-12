@@ -33,7 +33,7 @@ export default function Newsletter() {
     return(
         <section id="newsletter">
             <h2>Inscreva-se em nossa Newsletter gratuita!</h2>
-            <p>Receba todos os conteúdos do Bolso Cheio A.I direto em seu email, <br/> todas as segundas-feiras, as 11 horas.</p>
+            <p>Receba todos os conteúdos do Bolso Cheio A.I direto em seu email, <br/> todas as terças-feiras, as 10:30 da manhã.</p>
             
             <form onSubmit={handleSubmit}>
 
