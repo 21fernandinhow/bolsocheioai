@@ -303,4 +303,8 @@ hr {
   margin: 1em 1.5em;
 }
 
+textarea {
+  resize: none;
+}
+
 /*# sourceMappingURL=style.css.map */

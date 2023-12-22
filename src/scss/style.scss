@@ -92,3 +92,7 @@ hr{
 button{
     @extend .btn;
 }
+
+textarea{
+    resize: none;
+}
