@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation';
+import SharePostButtons from '@/components/SharePostButtons';
+import { PostToShare } from '@/components/SharePostButtons';
 
 export async function generateMetadata({ params }: { params: { _id: string }}):Promise<Metadata>{
 
@@ -37,11 +39,12 @@ export default async function PostPage({ params }: { params: { _id: string } }) 
         <section id="post">
 
             <h2>{post.title}</h2>
-            <h4>{formattedDate}</h4>
+            <h4>{formattedDate} <SharePostButtons id={params._id} title={post.title}/></h4>
 
             {post.content.split("\n").map((item:string, index:number) => (
                 <p key={index}>{item}</p>
             ))}
+
 
         </section>
     )

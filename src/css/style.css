@@ -209,6 +209,26 @@ footer h4 a:hover {
 #post p {
   margin-bottom: 15px;
 }
+#post .share-post {
+  display: inline-flex;
+  align-items: center;
+}
+#post .share-post h3 {
+  font-size: 1em;
+  color: var(--contrast-color);
+  margin-right: 5px;
+}
+#post .share-post a {
+  margin: 0px 5px;
+  color: var(--contrast-color);
+  font-size: 1.2em !important;
+  text-decoration: none;
+}
+#post .share-post a:hover {
+  color: var(--main-color);
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
 
 #not-found {
   min-height: 50vh;
@@ -237,7 +257,7 @@ footer h4 a:hover {
   justify-content: center;
 }
 
-.btn, button, .btn-bg, #home .posts .post-box a {
+.btn, button, .btn-sm, .btn-bg, #home .posts .post-box a {
   margin: 10px;
   padding: 10px 20px;
   border: none;
@@ -248,7 +268,7 @@ footer h4 a:hover {
   cursor: pointer;
   text-decoration: none;
 }
-.btn:hover, button:hover, .btn-bg:hover, #home .posts .post-box a:hover {
+.btn:hover, button:hover, .btn-sm:hover, .btn-bg:hover, #home .posts .post-box a:hover {
   padding: 10px 30px;
   background-color: var(--main-secondary-color);
   transition: 0.4s;
@@ -260,6 +280,15 @@ footer h4 a:hover {
 }
 .btn-bg:hover {
   padding: 12px 36px;
+}
+
+.btn-sm {
+  font-size: 0.9em;
+  margin: 5px;
+  padding: 5px 10px;
+}
+.btn-sm:hover {
+  padding: 5px 15px;
 }
 
 * {

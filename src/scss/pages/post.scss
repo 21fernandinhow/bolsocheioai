@@ -8,4 +8,24 @@
     p{
         margin-bottom: 15px;
     }
+    .share-post{
+        display: inline-flex;
+        align-items: center;
+        h3{
+            font-size: 1em;
+            color: var(--contrast-color);
+            margin-right: 5px;
+        }
+        a{
+            margin: 0px 5px;
+            color: var(--contrast-color);
+            font-size: 1.2em !important;
+            text-decoration: none;
+            &:hover{
+                color: var(--main-color);
+                transform: translateY(-5px);
+                transition: 0.3s;
+            }
+        }
+    }
 }

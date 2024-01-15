@@ -49,6 +49,16 @@
     }
 }
 
+.btn-sm{
+    @extend .btn;
+    font-size: 0.9em;
+    margin: 5px;
+    padding: 5px 10px;
+    &:hover{
+        padding: 5px 15px;
+    }
+}
+
 //General Customizing
 *{
     margin: 0;
