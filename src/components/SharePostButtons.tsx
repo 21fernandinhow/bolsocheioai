@@ -20,7 +20,7 @@ export default function SharePostButtons ({id, title}: PostToShare){
             <h3>- <FontAwesomeIcon icon={faShare} />  Compartilhar: </h3>
 
                 <Link 
-                    href={`https://wa.me/send?text=${encodeURIComponent(shareMessage)}`} 
+                    href={`https://wa.me/?text=${encodeURIComponent(shareMessage)}`} 
                     target="_blank" 
                     rel="noopener noreferrer"
                 >
