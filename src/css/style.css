@@ -127,14 +127,33 @@ footer h4 a:hover {
   flex-direction: column;
 }
 #home .header {
-  padding-bottom: 2em;
   text-align: center;
   width: 100%;
 }
 #home .header h2 {
   margin: 10px;
 }
+#home .search {
+  margin-top: 1.2em;
+  margin-bottom: 1.5em;
+}
+#home .search label {
+  color: var(--main-color);
+  font-size: 1.4em;
+  margin: 0em 0.5em;
+  cursor: pointer;
+}
+#home .search input {
+  background: none;
+  border: 1px solid var(--main-color);
+  border-radius: 30px;
+  padding: 6px 12px;
+}
+#home .search input:focus {
+  outline: none;
+}
 #home .posts {
+  margin-top: 0px;
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -251,7 +270,7 @@ footer h4 a:hover {
   --error-color: #FF4E3A;
 }
 
-.flex-central, nav .nav-content .menu ul, main, main #newsletter, main #newsletter form, #home, #home .pagination, #not-found {
+.flex-central, nav .nav-content .menu ul, main, main #newsletter, main #newsletter form, #home, #home .search, #home .pagination, #not-found {
   display: flex;
   align-items: center;
   justify-content: center;

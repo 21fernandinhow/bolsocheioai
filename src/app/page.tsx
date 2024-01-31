@@ -26,7 +26,7 @@ export default async function Home() {
     <section id="home">
       <div className="header">
         <h2>Bem-vindo ao Bolso Cheio A.I.</h2>
-        <p>Seu blog de finanças com conteúdo 100% produzido por inteligência artificial. Veja nossos últimos posts:</p>
+        <p>Seu blog de finanças com conteúdo gratuito 100% produzido por inteligência artificial.</p>
       </div>
       <PostList posts={posts.reverse()}/>
     </section>

@@ -2,14 +2,34 @@
     @extend .flex-central;
     flex-direction: column;
     .header{
-        padding-bottom: 2em;
         text-align: center;
         h2{
             margin: 10px;
         }
         width: 100%;
     }
+    .search{
+        margin-top: 1.2em;
+        margin-bottom: 1.5em;
+        @extend .flex-central;
+        label{
+            color: var(--main-color);
+            font-size: 1.4em;
+            margin: 0em 0.5em;
+            cursor: pointer;
+        }
+        input{
+            background: none;
+            border: 1px solid var(--main-color);
+            border-radius: 30px;
+            padding: 6px 12px;
+            &:focus{
+                outline: none;
+            }
+        }
+    }
     .posts{
+        margin-top: 0px;
         display: flex;
         justify-content: center;
         align-items: stretch;
