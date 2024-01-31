@@ -17,8 +17,9 @@ export default function PostList({posts}:PostListProps) {
     const filteredPosts = posts.filter(item => item.title.toLowerCase().includes(lowerCaseSearch));
 
     const nextPosts = () => {
-        if(postsIndex+5<posts.length){
+        if(postsIndex+5<filteredPosts.length){
             setPostsIndex(postsIndex+5)
+            console.log(postsIndex)
         }
     }
 
@@ -60,12 +61,14 @@ export default function PostList({posts}:PostListProps) {
 
             </section>
 
-            {filteredPosts.length>5 && (
+            {filteredPosts.length > 5 && (
                 <section className="pagination">
-                    {postsIndex>0 && (
+                    {postsIndex > 0 && (
                         <button onClick={previousPosts}>Página Anterior</button>
                     )}
-                    <button onClick={nextPosts}>Próxima Página</button>
+                    {filteredPosts.length - postsIndex > 5 && (
+                        <button onClick={nextPosts}>Próxima Página</button>
+                    )}
                 </section>
             )}
         </>
