@@ -163,9 +163,15 @@ footer h4 a:hover {
 #home .posts .post-box {
   border: 1px solid var(--main-color);
   border-radius: 15px;
-  padding: 1.5em 1.5em 2.5em 1.5em;
+  padding: 1.5em 1.5em 6em 1.5em;
   margin: 1.5em;
-  width: 20em;
+  max-width: 20em;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+#home .posts .post-box h3 {
+  min-height: 25%;
 }
 #home .posts .post-box h3, #home .posts .post-box h4, #home .posts .post-box p, #home .posts .post-box a {
   margin: 10px;
@@ -173,11 +179,10 @@ footer h4 a:hover {
 #home .posts .post-box h4 {
   color: var(--main-secondary-color);
 }
-#home .posts .post-box p {
-  margin-bottom: 30px;
-}
 #home .posts .post-box a {
   text-decoration: none;
+  position: absolute;
+  bottom: 1.5em;
 }
 #home .posts .post-box:hover {
   transform: translateY(-10px);
