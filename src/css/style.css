@@ -167,11 +167,6 @@ footer h4 a:hover {
   margin: 1.5em;
   max-width: 20em;
   position: relative;
-  display: flex;
-  flex-direction: column;
-}
-#home .posts .post-box h3 {
-  min-height: 30%;
 }
 #home .posts .post-box h3, #home .posts .post-box h4, #home .posts .post-box p, #home .posts .post-box a {
   margin: 10px;
