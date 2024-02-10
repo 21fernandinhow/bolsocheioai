@@ -134,6 +134,7 @@ footer h4 a:hover {
   margin: 10px;
 }
 #home .search {
+  display: flex;
   margin-top: 1.2em;
   margin-bottom: 1.5em;
   border: 1px solid var(--main-color);
