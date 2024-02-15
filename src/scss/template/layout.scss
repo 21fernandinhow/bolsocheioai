@@ -36,10 +36,11 @@ nav{
                 li{
                     font-size: 16px;
                     font-weight: bold;
-                    margin: 0px 10px;
-                    a{
+                    margin: 0px 6px;
+                    a, #theme-btn{
                         text-decoration: none;
                         color: var(--contrast-color);
+                        cursor: pointer;
                         &:hover{
                             color: var(--main-color);
                             text-decoration: underline;

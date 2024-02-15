@@ -2,6 +2,7 @@ import Image from "next/image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
+import ThemeButton from "./ThemeButton";
 
 export default function Navbar() {
     return(
@@ -26,6 +27,9 @@ export default function Navbar() {
                             <Link href="https://www.instagram.com/bolsocheio.ai" target="_blank" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faInstagram} />
                             </Link>
+                        </li>
+                        <li>
+                            <ThemeButton/>
                         </li>
                     </ul>
                 </div>
