@@ -31,6 +31,7 @@ export default function ThemeButton () {
         document.body.style.setProperty("--bg-main-color", isThemeDark ? "#181821" : "#F5F5F5");
         document.body.style.setProperty("--bg-secondary-color", isThemeDark ? "#11111C" : "#FFF");
         document.body.style.setProperty("--contrast-color", isThemeDark ? "#F5F5F5" : "#181821");
+        document.body.style.setProperty("--shadow-color", isThemeDark ? "rgba(120, 221, 156, 0.4)" : "rgba(0,0,0, 0.4)");
     }
 
     useEffect(()=>{

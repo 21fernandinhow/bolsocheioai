@@ -2,10 +2,10 @@ import type { Metadata } from 'next'
 import Navbar from "@/components/Navbar"
 import Footer from '@/components/Footer'
 import Newsletter from '@/components/Newsletter'
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@/css/style.css"
-import GoogleAnalytics from '@/components/GoogleAnalytics';
 
 config.autoAddCss = false;
 
