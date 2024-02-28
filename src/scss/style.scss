@@ -107,3 +107,7 @@ button{
 textarea{
     resize: none;
 }
+
+input, textarea{
+    color: var(--contrast-color);
+}

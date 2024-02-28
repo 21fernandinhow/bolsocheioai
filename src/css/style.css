@@ -150,7 +150,6 @@ footer h4 a:hover {
 #home .search input {
   background: none;
   border: none;
-  color: var(--contrast-color);
 }
 #home .search input:focus {
   outline: none;
@@ -357,6 +356,10 @@ hr {
 
 textarea {
   resize: none;
+}
+
+input, textarea {
+  color: var(--contrast-color);
 }
 
 /*# sourceMappingURL=style.css.map */
