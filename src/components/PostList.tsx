@@ -1,31 +1,32 @@
 "use client"
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
 import PostBox, {PostBoxProps} from "./PostBox"
 import { useState } from "react"
 
 type PostListProps = {
-    posts: PostBoxProps[];
+    posts: PostBoxProps[]
 }
 
 export default function PostList({posts}:PostListProps) {
 
-    const [postsIndex, setPostsIndex] = useState(0);
-    const [search, setSearch] = useState('');
-    const lowerCaseSearch = search.toLowerCase();
-    const filteredPosts = posts.filter(item => item.title.toLowerCase().includes(lowerCaseSearch));
+    const [postsIndex, setPostsIndex] = useState(0)
+    const [search, setSearch] = useState('')
+    const lowerCaseSearch = search.toLowerCase()
+    const filteredPosts = posts.filter(item => item.title.toLowerCase().includes(lowerCaseSearch))
+    const postsPerPage = window.innerWidth >= 1440 ? 5 : window.innerWidth >= 1073 ? 3 : 4
 
     const nextPosts = () => {
-        if(postsIndex+5<filteredPosts.length){
-            setPostsIndex(postsIndex+5)
+        if(postsIndex + postsPerPage < filteredPosts.length){
+            setPostsIndex(postsIndex + postsPerPage)
             console.log(postsIndex)
         }
     }
 
     const previousPosts = () => {
-        if(postsIndex>=5){
-            setPostsIndex(postsIndex-5)
+        if(postsIndex >= postsPerPage){
+            setPostsIndex(postsIndex - postsPerPage)
         }
     }
 
@@ -50,7 +51,7 @@ export default function PostList({posts}:PostListProps) {
                 {
                     filteredPosts.length > 0 && (
                         
-                        filteredPosts.slice(postsIndex, postsIndex+5).map((item, index)=>{
+                        filteredPosts.slice(postsIndex, postsIndex + postsPerPage).map((item, index)=>{
                             return <PostBox key={index} _id={item._id} title={item.title} date={item.date} content={item.content}/>
                         })
                         
@@ -61,12 +62,12 @@ export default function PostList({posts}:PostListProps) {
 
             </section>
 
-            {filteredPosts.length > 5 && (
+            {filteredPosts.length > postsPerPage && (
                 <section className="pagination">
                     {postsIndex > 0 && (
                         <button onClick={previousPosts}>Página Anterior</button>
                     )}
-                    {filteredPosts.length - postsIndex > 5 && (
+                    {filteredPosts.length - postsIndex > postsPerPage && (
                         <button onClick={nextPosts}>Próxima Página</button>
                     )}
                 </section>
