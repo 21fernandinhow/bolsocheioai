@@ -163,7 +163,7 @@ footer h4 a:hover {
 #home .posts {
   margin-top: 0px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: stretch;
   flex-wrap: wrap;
   width: 100%;
