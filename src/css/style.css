@@ -51,7 +51,7 @@ nav .nav-content .menu ul li a:hover, nav .nav-content .menu ul li #theme-btn:ho
 
 main {
   min-height: 70vh;
-  padding: 3vh 10vw;
+  padding: 2vh 10vw;
 }
 main section {
   margin-left: auto;
@@ -163,7 +163,7 @@ footer h4 a:hover {
 #home .posts {
   margin-top: 0px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: stretch;
   flex-wrap: wrap;
   width: 100%;
