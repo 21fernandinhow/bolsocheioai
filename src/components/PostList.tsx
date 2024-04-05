@@ -15,7 +15,7 @@ export default function PostList({posts}:PostListProps) {
     const [search, setSearch] = useState('')
     const lowerCaseSearch = search.toLowerCase()
     const filteredPosts = posts.filter(item => item.title.toLowerCase().includes(lowerCaseSearch))
-    const postsPerPage = 5
+    const postsPerPage = 3
 
     const nextPosts = () => {
         if(postsIndex + postsPerPage < filteredPosts.length){

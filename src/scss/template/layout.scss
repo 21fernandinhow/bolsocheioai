@@ -54,12 +54,12 @@ nav{
 }
 
 main{
-    padding: 2vh 10%;
-    @extend .flex-central;
-    flex-direction: column;
     min-height: 70vh;
+    padding: 2vh 10vw;
     section{
-        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1240px;
         h2{
             font-size: 2.5em;
         }
