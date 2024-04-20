@@ -42,7 +42,7 @@ export default async function PostPage({ params }: { params: { _id: string } }) 
             <h4>{formattedDate} <SharePostButtons id={params._id} title={post.title}/></h4>
 
             {post.content.split("\n").map((item:string, index:number) => (
-                <p key={index} dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }}></p>
+                <p key={index} dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace("###", "") }}></p>
             ))}
 
         </section>
