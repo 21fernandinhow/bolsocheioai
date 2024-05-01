@@ -8,7 +8,7 @@ export async function generateMetadata({ params }: { params: { _id: string }}):P
     const post = await getPostById(params._id);
 
     return{
-        title: `${post.title}`,
+        title: post.title,
         description: post.content.slice(0,150)
     }
 }
