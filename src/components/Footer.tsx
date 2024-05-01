@@ -4,10 +4,9 @@ export default function Footer() {
     return(
         <footer>
             <hr/>
-            <h4>Este blog tem seu conteúdo gerado 100% por IA (inteligência artificial).
-                O criador não se responsabiliza por postagens consideradas inapropriadas ou ofensivas.
+            <h4>O Bolso Cheio A.I tem seu conteúdo gerado 100% por IA (inteligência artificial).
                 <br/><br/>
-                O intuito deste blog é informar e ensinar sobre educação financeira de forma inovadora, com o melhor da tecnologia disponível.</h4>
+                O intuito do Bolso Cheio A.I é informar e ensinar sobre educação financeira de forma inovadora, com o melhor da tecnologia disponível.</h4>
             <h4>
                 <Link href="https://fernandocarvalhodev.com" rel="noopener noreferrer" target="_blank">Desenvolvido por Fernando Carvalho.</Link>    
             </h4>
