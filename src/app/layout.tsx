@@ -10,7 +10,7 @@ import "@/css/style.css"
 config.autoAddCss = false;
 
 export const metadata: Metadata = {
-  title: 'Home | Bolso Cheio AI',
+  title: 'Bolso Cheio A.I | Home',
   description: 'Receba dicas financeiras geradas com uma inteligência artificial!',
 }
 
