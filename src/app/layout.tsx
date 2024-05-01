@@ -10,8 +10,8 @@ import "@/css/style.css"
 config.autoAddCss = false;
 
 export const metadata: Metadata = {
-  title: 'Bolso Cheio AI',
-  description: 'Um blog de finanças com conteúdo 100% feito por inteligência artificial',
+  title: 'Home | Bolso Cheio AI',
+  description: 'Receba dicas financeiras geradas com uma inteligência artificial!',
 }
 
 export default function RootLayout({
