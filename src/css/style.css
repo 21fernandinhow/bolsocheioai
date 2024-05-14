@@ -4,10 +4,20 @@ section {
   text-align: center;
 }
 section h1 {
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 section h1, section p {
   margin: 10px;
+}
+section .options a, section .options span {
+  margin: 5px;
+  font-size: 1.1rem;
+  color: var(--contrast-color);
+  cursor: pointer;
+}
+section .options a:hover, section .options span:hover {
+  color: var(--main-color);
+  transition: 0.3s;
 }
 
 :root {
