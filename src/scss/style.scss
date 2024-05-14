@@ -1,10 +1,6 @@
 //Imports
 @import './template/layout.scss';
 @import './template/responsivity.scss';
-@import './pages/home.scss';
-@import './pages/about.scss';
-@import './pages/contact.scss';
-@import './pages/post.scss';
 @import './pages/404.scss';
 
 //Colors
@@ -76,6 +72,7 @@ body{
     font-family: monospace;
     color: var(--contrast-color);
     background: var(--bg-main-color) !important;
+    min-height: 100vh;
 }
 
 body::-webkit-scrollbar {
@@ -98,7 +95,7 @@ body::-webkit-scrollbar-thumb {
 hr{
     border-color: none;
     border-top: 1px solid var(--main-secondary-color);
-    margin: 1em;
+    margin: 1rem;
 }
 
 button{

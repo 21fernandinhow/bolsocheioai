@@ -1,12 +1,12 @@
-#not-found{
-    min-height: 50vh;
+section{
+    min-height: 100vh;
     @extend .flex-central;
     flex-direction: column;
     text-align: center;
     h1{
-        font-size: 2.2em;
+        font-size: 2rem;
     }
     h1,p{
-        margin-bottom: 10px;
+        margin: 10px;
     }
 }

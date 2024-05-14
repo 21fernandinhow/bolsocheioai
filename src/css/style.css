@@ -1,272 +1,13 @@
-nav {
-  width: 100%;
-  margin-bottom: 2vh;
-}
-nav .nav-content {
-  margin: 0em 1em;
-  padding: 0.7em;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-nav .nav-content .brand a {
-  display: flex;
-  align-items: flex-end;
-  text-decoration: none;
-  color: var(--contrast-color);
-}
-nav .nav-content .brand a h1 {
-  opacity: 0.9;
-  margin: 0px 10px;
-  font-size: 1.4em;
-}
-nav .nav-content .brand a h1:hover {
-  color: var(--main-secondary-color);
-  text-decoration: underline;
-  transition: 0.4s;
-}
-nav .nav-content .menu {
-  display: flex;
-  align-items: flex-end;
-  margin-top: 1.1em;
-}
-nav .nav-content .menu ul {
-  flex-wrap: wrap;
-  list-style: none;
-}
-nav .nav-content .menu ul li {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0px 6px;
-}
-nav .nav-content .menu ul li a, nav .nav-content .menu ul li #theme-btn {
-  text-decoration: none;
-  color: var(--contrast-color);
-  cursor: pointer;
-}
-nav .nav-content .menu ul li a:hover, nav .nav-content .menu ul li #theme-btn:hover {
-  color: var(--main-color);
-  text-decoration: underline;
-}
-
-main {
-  min-height: 70vh;
-  padding: 2vh 10vw;
-}
-main section {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1240px;
-}
-main section h2 {
-  font-size: 2.5em;
-}
-main section p {
-  font-size: 1.1em;
-}
-main #newsletter {
-  padding: 2.5em;
-  margin: 4.5em auto 4.5em auto;
-  border-radius: 15px;
-  box-shadow: 0px 0px 5px var(--shadow-color);
+section {
+  min-height: 100vh;
   flex-direction: column;
-  background-color: var(--bg-secondary-color);
+  text-align: center;
 }
-main #newsletter h2, main #newsletter p {
+section h1 {
+  font-size: 2rem;
+}
+section h1, section p {
   margin: 10px;
-  text-align: center;
-}
-main #newsletter h2 {
-  font-size: 2em;
-  color: var(--main-secondary-color);
-}
-main #newsletter p {
-  font-size: 1.1em;
-}
-main #newsletter form {
-  flex-wrap: wrap;
-}
-main #newsletter form input {
-  margin: 10px;
-  padding: 10px 20px;
-  border: 1px solid var(--main-color);
-  border-radius: 15px;
-  font-weight: bold;
-  background-color: var(--bg-main-color);
-  max-width: 18em;
-}
-main #newsletter form input:focus {
-  outline: none;
-}
-main #newsletter .success-icon {
-  font-size: 2.2em;
-  color: var(--main-secondary-color);
-}
-main #newsletter .error-message {
-  margin-top: 10px;
-  color: var(--error-color);
-}
-
-footer {
-  min-height: 10vh;
-  text-align: center;
-  padding-bottom: 1em;
-}
-footer h4 {
-  margin: 15px;
-}
-footer h4 a {
-  color: var(--main-secondary-color);
-  text-decoration: none;
-}
-footer h4 a:hover {
-  font-size: 14px;
-  text-decoration: underline;
-  transition: 0.4s;
-}
-
-@media (max-width: 902px) {
-  #home .posts .post-box {
-    max-width: 100% !important;
-  }
-}
-#home {
-  flex-direction: column;
-}
-#home .header {
-  text-align: center;
-  width: 100%;
-}
-#home .header h2 {
-  margin-bottom: 10px;
-}
-#home .search {
-  display: flex;
-  margin-top: 1.2em;
-  margin-bottom: 1.5em;
-  border: 1px solid var(--main-color);
-  border-radius: 30px;
-  padding: 10px 12px;
-}
-#home .search label {
-  color: var(--main-color);
-  margin: 0em 0.7em;
-  cursor: pointer;
-}
-#home .search input {
-  background: none;
-  border: none;
-}
-#home .search input:focus {
-  outline: none;
-}
-#home .posts {
-  margin-top: 0px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: stretch;
-  flex-wrap: wrap;
-  width: 100%;
-}
-#home .posts .post-box {
-  border: 1px solid var(--main-color);
-  border-radius: 15px;
-  padding: 1.5em 1.5em 6em 1.5em;
-  margin: 1em 0em;
-  max-width: 30%;
-  position: relative;
-}
-#home .posts .post-box h3, #home .posts .post-box h4, #home .posts .post-box p, #home .posts .post-box a {
-  margin: 10px;
-}
-#home .posts .post-box h4 {
-  color: var(--main-secondary-color);
-}
-#home .posts .post-box a {
-  text-decoration: none;
-  position: absolute;
-  bottom: 1.5em;
-}
-#home .posts .post-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 1px 2px 3px var(--shadow-color);
-  transition: 0.4s;
-}
-#home .pagination {
-  flex-wrap: wrap;
-}
-
-#about p {
-  margin-top: 15px;
-}
-
-#contact h2 {
-  margin-bottom: 15px;
-}
-#contact form {
-  display: flex;
-  flex-direction: column;
-  max-width: 40em;
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-#contact form input, #contact form textarea {
-  margin: 10px 0px;
-  padding: 10px 5px;
-  width: 100%;
-  border: none;
-  background: none;
-  border-bottom: 1px solid var(--main-color);
-  font-weight: bold;
-}
-#contact form input:focus, #contact form textarea:focus {
-  outline: none;
-  border-bottom: 2px solid var(--main-secondary-color);
-}
-#contact form button {
-  margin: 10px 0px;
-}
-
-#post h2, #post h4 {
-  margin-bottom: 20px;
-}
-#post h4 {
-  color: var(--main-secondary-color);
-}
-#post p {
-  margin-bottom: 15px;
-}
-#post .share-post {
-  display: inline-flex;
-  align-items: center;
-}
-#post .share-post h3 {
-  font-size: 1em;
-  color: var(--contrast-color);
-  margin-right: 5px;
-}
-#post .share-post a {
-  margin: 0px 5px;
-  color: var(--contrast-color);
-  font-size: 1.2em !important;
-  text-decoration: none;
-}
-#post .share-post a:hover {
-  color: var(--main-color);
-  transform: translateY(-5px);
-  transition: 0.3s;
-}
-
-#not-found {
-  min-height: 50vh;
-  flex-direction: column;
-  text-align: center;
-}
-#not-found h1 {
-  font-size: 2.2em;
-}
-#not-found h1, #not-found p {
-  margin-bottom: 10px;
 }
 
 :root {
@@ -279,13 +20,13 @@ footer h4 a:hover {
   --shadow-color: rgba(0,0,0, 0.4);
 }
 
-.flex-central, nav .nav-content .menu ul, main #newsletter, main #newsletter form, #home, #home .pagination, #not-found {
+.flex-central, section {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.btn, button, .btn-sm, .btn-bg, #home .posts .post-box a {
+.btn, button, .btn-sm, .btn-bg {
   margin: 10px;
   padding: 10px 20px;
   border: none;
@@ -296,7 +37,7 @@ footer h4 a:hover {
   cursor: pointer;
   text-decoration: none;
 }
-.btn:hover, button:hover, .btn-sm:hover, .btn-bg:hover, #home .posts .post-box a:hover {
+.btn:hover, button:hover, .btn-sm:hover, .btn-bg:hover {
   padding: 10px 30px;
   background-color: var(--main-secondary-color);
   transition: 0.4s;
@@ -333,6 +74,7 @@ body {
   font-family: monospace;
   color: var(--contrast-color);
   background: var(--bg-main-color) !important;
+  min-height: 100vh;
 }
 
 body::-webkit-scrollbar {
@@ -357,7 +99,7 @@ body::-webkit-scrollbar-thumb {
 hr {
   border-color: none;
   border-top: 1px solid var(--main-secondary-color);
-  margin: 1em;
+  margin: 1rem;
 }
 
 textarea {
