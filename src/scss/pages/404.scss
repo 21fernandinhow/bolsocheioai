@@ -1,24 +1,12 @@
-section{
+#not-found{
     min-height: 100vh;
     @extend .flex-central;
     flex-direction: column;
     text-align: center;
     h1{
-        font-size: 1.7rem;
+        font-size: 2rem;
     }
     h1,p{
         margin: 10px;
-    }
-    .options{
-        a, span{
-            margin: 5px;
-            font-size: 1.1rem;
-            color: var(--contrast-color);
-            cursor: pointer;
-            &:hover{
-                color: var(--main-color);
-                transition: 0.3s;
-            }
-        }
     }
 }

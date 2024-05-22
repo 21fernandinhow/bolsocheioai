@@ -1,23 +1,52 @@
-section {
+#login {
+  min-height: 100vh;
+  padding: 2rem;
+}
+#login section {
+  padding: 1.5rem;
+  max-width: 450px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px var(--shadow-color);
+  background-color: var(--bg-secondary-color);
+}
+#login section h1 {
+  text-align: center;
+  color: var(--main-secondary-color);
+}
+#login section hr {
+  border: 2px solid var(--main-color);
+}
+#login section form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+#login section form label {
+  margin-bottom: 0.5rem;
+  margin-left: 0.3rem;
+}
+#login section form input {
+  margin-bottom: 0.7rem;
+}
+#login section .success-icon {
+  font-size: 2.2em;
+  color: var(--main-secondary-color);
+}
+#login section .error-message {
+  margin-top: 10px;
+  color: var(--error-color);
+}
+
+#not-found {
   min-height: 100vh;
   flex-direction: column;
   text-align: center;
 }
-section h1 {
-  font-size: 1.7rem;
+#not-found h1 {
+  font-size: 2rem;
 }
-section h1, section p {
+#not-found h1, #not-found p {
   margin: 10px;
-}
-section .options a, section .options span {
-  margin: 5px;
-  font-size: 1.1rem;
-  color: var(--contrast-color);
-  cursor: pointer;
-}
-section .options a:hover, section .options span:hover {
-  color: var(--main-color);
-  transition: 0.3s;
 }
 
 :root {
@@ -30,7 +59,7 @@ section .options a:hover, section .options span:hover {
   --shadow-color: rgba(0,0,0, 0.4);
 }
 
-.flex-central, section {
+.flex-central, #login, #not-found {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,16 +141,31 @@ hr {
   margin: 1rem;
 }
 
-textarea {
-  resize: none;
+input {
+  padding: 10px 20px;
 }
 
 input, textarea {
   color: var(--contrast-color);
+  border: 1px solid var(--main-color);
+  border-radius: 15px;
+  font-weight: bold;
+  background-color: none;
 }
 input::placeholder, textarea::placeholder {
   color: var(--contrast-color);
   opacity: 0.8;
+}
+input:focus, textarea:focus {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+label {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,7 @@
 //Imports
 @import './template/layout.scss';
 @import './template/responsivity.scss';
+@import './pages/login.scss';
 @import './pages/404.scss';
 
 //Colors
@@ -102,14 +103,30 @@ button{
     @extend .btn;
 }
 
-textarea{
-    resize: none;
+input{
+    padding: 10px 20px;
 }
 
 input, textarea{
     color: var(--contrast-color);
+    border: 1px solid var(--main-color);
+    border-radius: 15px;
+    font-weight: bold;
+    background-color: none;
     &::placeholder{
         color: var(--contrast-color);
         opacity: 0.8;
     }
+    &:focus{
+        outline: none;
+    }
 }
+
+textarea{
+    resize: none;
+}
+
+label{
+    cursor: pointer;
+}
+

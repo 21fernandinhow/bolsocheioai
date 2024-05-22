@@ -1,46 +1,46 @@
-import Link from "next/link"
-import Image from "next/image"
-import ThemeButton from "@/components/ThemeButton"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+"use client"
 
-// async function getPosts() {
+import { useState } from "react";
+import { signIn } from "next-auth/react";
 
-//   const response = await fetch(`${process.env.NEXT_PUBLIC_POSTS_URL}`, {
-//       method: 'GET',
-//       headers: {
-//           'Content-Type': 'application/json',
-//           'x-api-key': `${process.env.NEXT_PUBLIC_API_KEY}`,
-//       },
-//       next: { revalidate: 300 }
-//   });
+export default function Login() {
 
-//   if (!response.ok) {
-//       throw new Error('Erro ao buscar posts')
-//   }
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
 
-//   return response.json();
-// };
+  const auth = async (e: any) => {
+    e.preventDefault()
 
-export default async function ProvisoryHome() {
+    const data = {
+      username: username,
+      password: password
+    }
+
+    signIn("credentials", {
+      ...data,
+      callbackUrl: "/home"
+    })
+  }
 
   return (
+    <div id="login">
       <section>
-        <Link href="https://bolsocheio.ai">
-          <Image src={'/logo.png'}
-              width={120}
-              height={80}
-              alt={"Bol$o Cheio AI"}          
-          />
-        </Link>
-        <h1>Em breve...</h1>
-        <div className="options">
-          <Link href="https://www.instagram.com/bolsocheio.ai" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faInstagram} />
-          </Link>
-          <ThemeButton/>
-        </div>
+
+        <h1>Login</h1>
+        <hr/>
+
+        <form>
+          <label htmlFor="username"> Usuário </label>
+          <input id="username" name="username" type="text" onChange={ (e) => setUsername(e.target.value.slice(0, 20)) } />
+
+          <label htmlFor="password"> Senha </label>
+          <input id="password" name="password" type="password" onChange={ (e) => setPassword(e.target.value.slice(0, 20)) } />
+
+          <button onClick={auth}>Entrar</button>
+        </form>
+
       </section>
+    </div>
   )
 }
 
