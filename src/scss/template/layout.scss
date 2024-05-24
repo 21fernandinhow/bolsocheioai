@@ -9,19 +9,27 @@
     }
     #sidebar{
         width: 280px;
+        position: relative;
         border-right: 1px solid var(--main-color);
-        h1, a{
-            color: var(--contrast-color);
-            text-decoration: none;
-        }
         nav{
-            margin-top: 1rem;
+            position: fixed;
+            h1{
+                margin-top: 5px;
+            }
+            h1, a{
+                color: var(--contrast-color);
+                text-decoration: none;
+            }
+            .brand{
+                margin: 10px;
+            }
             ul{
+                margin: 20px 0rem;
                 list-style: none;
                 li{
                     width: 100%;
                     margin-top: 0.5rem;
-                    padding: 0.5rem;
+                    padding: 0.7rem 2rem 0.7rem 0.5rem;
                     font-size: 1rem;
                     border-radius: 10px;
                     svg{

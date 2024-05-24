@@ -10,22 +10,30 @@
 }
 #dashboard #sidebar {
   width: 280px;
+  position: relative;
   border-right: 1px solid var(--main-color);
 }
-#dashboard #sidebar h1, #dashboard #sidebar a {
+#dashboard #sidebar nav {
+  position: fixed;
+}
+#dashboard #sidebar nav h1 {
+  margin-top: 5px;
+}
+#dashboard #sidebar nav h1, #dashboard #sidebar nav a {
   color: var(--contrast-color);
   text-decoration: none;
 }
-#dashboard #sidebar nav {
-  margin-top: 1rem;
+#dashboard #sidebar nav .brand {
+  margin: 10px;
 }
 #dashboard #sidebar nav ul {
+  margin: 20px 0rem;
   list-style: none;
 }
 #dashboard #sidebar nav ul li {
   width: 100%;
   margin-top: 0.5rem;
-  padding: 0.5rem;
+  padding: 0.7rem 2rem 0.7rem 0.5rem;
   font-size: 1rem;
   border-radius: 10px;
 }
@@ -54,7 +62,6 @@
     min-height: 100%;
     margin: 0rem;
     padding: 1rem;
-    padding-top: 4rem;
     border: none;
   }
   #dashboard #toogle-sidebar {
@@ -62,6 +69,7 @@
   }
   #dashboard #sidebar, #dashboard main {
     width: 100%;
+    padding-top: 4rem;
   }
   #dashboard main {
     z-index: 0;
