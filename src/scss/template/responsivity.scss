@@ -1,2 +1,28 @@
-@media (max-width: 902px) {
+@media (max-width: 769px) {
+    #dashboard{
+        #sidebar{
+            background: var(--bg-main-color);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            min-height: 100%;
+            margin: 0rem;
+            padding: 1rem;
+            padding-top: 4rem;
+            border: none;
+        }
+        #toogle-sidebar{
+            display: block;
+        }
+        #sidebar, main{
+            width: 100%;
+        }
+        main{
+            z-index: 0;
+        }
+    }
+    .invisible-on-mobile{
+        display: none;
+    }
 }

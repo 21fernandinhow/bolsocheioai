@@ -1,0 +1,45 @@
+#dashboard{
+    display: flex;
+    align-items: stretch;
+    border-radius: 20px;
+    #sidebar, main{
+        padding: 1.5rem;
+        margin: 1.5rem;
+        min-height: 100vh;
+    }
+    #sidebar{
+        width: 280px;
+        border-right: 1px solid var(--main-color);
+        h1, a{
+            color: var(--contrast-color);
+            text-decoration: none;
+        }
+        nav{
+            margin-top: 1rem;
+            ul{
+                list-style: none;
+                li{
+                    width: 100%;
+                    margin-top: 0.5rem;
+                    padding: 0.5rem;
+                    font-size: 1rem;
+                    border-radius: 10px;
+                    svg{
+                        margin: 0rem 0.5rem;
+                        color: var(--main-color);
+                    }
+                    &:hover{
+                        svg{
+                            color: var(--main-secondary-color);
+                        }
+                        background-color: var(--bg-secondary-color);
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
+    }
+    main{
+        width: 100%;
+    }
+}

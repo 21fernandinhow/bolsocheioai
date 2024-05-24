@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@/css/style.css"
+import ThemeButton from '@/components/ThemeButton';
 
 config.autoAddCss = false;
 
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body>
+        <ThemeButton/>
         {children}
       </body>
     </html>

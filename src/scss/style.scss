@@ -112,7 +112,7 @@ input, textarea{
     border: 1px solid var(--main-color);
     border-radius: 15px;
     font-weight: bold;
-    background-color: none;
+    background: none;
     &::placeholder{
         color: var(--contrast-color);
         opacity: 0.8;
@@ -130,3 +130,23 @@ label{
     cursor: pointer;
 }
 
+#theme-btn, #toogle-sidebar{
+    position: absolute;
+    top: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 2;
+    &:hover{
+        color: var(--main-color);
+        transition: 0.3s;
+    }
+}
+
+#toogle-sidebar{
+    left: 1rem;
+    display: none;
+}
+
+#theme-btn{
+    right: 1rem;
+}

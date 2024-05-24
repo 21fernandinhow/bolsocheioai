@@ -18,7 +18,7 @@ export default function Login() {
 
     signIn("credentials", {
       ...data,
-      callbackUrl: "/home"
+      callbackUrl: "/"
     })
   }
 
@@ -43,4 +43,3 @@ export default function Login() {
     </div>
   )
 }
-

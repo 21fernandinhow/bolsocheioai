@@ -1,3 +1,75 @@
+#dashboard {
+  display: flex;
+  align-items: stretch;
+  border-radius: 20px;
+}
+#dashboard #sidebar, #dashboard main {
+  padding: 1.5rem;
+  margin: 1.5rem;
+  min-height: 100vh;
+}
+#dashboard #sidebar {
+  width: 280px;
+  border-right: 1px solid var(--main-color);
+}
+#dashboard #sidebar h1, #dashboard #sidebar a {
+  color: var(--contrast-color);
+  text-decoration: none;
+}
+#dashboard #sidebar nav {
+  margin-top: 1rem;
+}
+#dashboard #sidebar nav ul {
+  list-style: none;
+}
+#dashboard #sidebar nav ul li {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+#dashboard #sidebar nav ul li svg {
+  margin: 0rem 0.5rem;
+  color: var(--main-color);
+}
+#dashboard #sidebar nav ul li:hover {
+  background-color: var(--bg-secondary-color);
+  transition: 0.3s;
+}
+#dashboard #sidebar nav ul li:hover svg {
+  color: var(--main-secondary-color);
+}
+#dashboard main {
+  width: 100%;
+}
+
+@media (max-width: 769px) {
+  #dashboard #sidebar {
+    background: var(--bg-main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    min-height: 100%;
+    margin: 0rem;
+    padding: 1rem;
+    padding-top: 4rem;
+    border: none;
+  }
+  #dashboard #toogle-sidebar {
+    display: block;
+  }
+  #dashboard #sidebar, #dashboard main {
+    width: 100%;
+  }
+  #dashboard main {
+    z-index: 0;
+  }
+  .invisible-on-mobile {
+    display: none;
+  }
+}
 #login {
   min-height: 100vh;
   padding: 2rem;
@@ -150,7 +222,7 @@ input, textarea {
   border: 1px solid var(--main-color);
   border-radius: 15px;
   font-weight: bold;
-  background-color: none;
+  background: none;
 }
 input::placeholder, textarea::placeholder {
   color: var(--contrast-color);
@@ -166,6 +238,27 @@ textarea {
 
 label {
   cursor: pointer;
+}
+
+#theme-btn, #toogle-sidebar {
+  position: absolute;
+  top: 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 2;
+}
+#theme-btn:hover, #toogle-sidebar:hover {
+  color: var(--main-color);
+  transition: 0.3s;
+}
+
+#toogle-sidebar {
+  left: 1rem;
+  display: none;
+}
+
+#theme-btn {
+  right: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
