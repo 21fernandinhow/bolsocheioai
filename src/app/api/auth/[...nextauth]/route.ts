@@ -1,10 +1,9 @@
 import NextAuth from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
-import { parseUrl } from "next/dist/shared/lib/router/utils/parse-url"
 
 const handler = NextAuth({
   pages: {
-    signIn: "/",
+    signIn: "/login",
   },
   providers: [
     CredentialsProvider({

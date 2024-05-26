@@ -26,8 +26,8 @@ export default function Sidebar() {
 
                     <ul>
                         <Link href="/"> <li> <FontAwesomeIcon icon={faHouse} /> Início </li> </Link>
-                        <Link href="/"> <li> <FontAwesomeIcon icon={faChartSimple} /> Inscritos </li> </Link>
-                        <Link href="/"> <li> <FontAwesomeIcon icon={faNewspaper} /> Posts </li> </Link>
+                        <Link href="/leads"> <li> <FontAwesomeIcon icon={faChartSimple} /> Inscritos </li> </Link>
+                        <Link href="/posts"> <li> <FontAwesomeIcon icon={faNewspaper} /> Posts </li> </Link>
                     </ul>
                     
                     <button onClick={() => signOut()} className="btn"> Sair <FontAwesomeIcon icon={faRightFromBracket} /> </button>
