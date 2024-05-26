@@ -56,7 +56,6 @@
 #dashboard main {
   width: 100%;
   padding: 3.5rem 2rem;
-  height: 150vh;
 }
 
 @media (max-width: 769px) {

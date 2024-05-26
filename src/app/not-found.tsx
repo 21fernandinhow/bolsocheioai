@@ -11,7 +11,7 @@ export default function NotFoundPage() {
 	return (
         <section id="not-found">
             <h1>Página não encontrada</h1>
-            <p>Parece que o conteúdo que você está buscando não existe (ainda) ... </p>
+            <p>Parece que o conteúdo que você está buscando não existe ... </p>
             <Link href='/' className="btn-lg">Voltar ao Início</Link>
         </section>
     )
