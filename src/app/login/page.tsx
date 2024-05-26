@@ -36,7 +36,7 @@ export default function Login() {
           <label htmlFor="password"> Senha </label>
           <input id="password" name="password" type="password" onChange={ (e) => setPassword(e.target.value.slice(0, 20)) } />
 
-          <button onClick={auth}>Entrar</button>
+          <button onClick={auth} className="btn-lg">Entrar</button>
         </form>
 
       </section>

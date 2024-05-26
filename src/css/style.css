@@ -1,23 +1,28 @@
 #dashboard {
   display: flex;
   align-items: stretch;
-  border-radius: 20px;
-}
-#dashboard #sidebar, #dashboard main {
-  padding: 1.5rem;
-  margin: 1.5rem;
-  min-height: 100vh;
 }
 #dashboard #sidebar {
-  width: 280px;
-  position: relative;
-  border-right: 1px solid var(--main-color);
+  min-width: 280px;
+  background-color: var(--bg-secondary-color);
+  box-shadow: 0px 0px 10px var(--shadow-color);
+  padding: 0rem 2rem;
+  min-height: 100vh;
+}
+#dashboard #sidebar svg {
+  margin: 0rem 0.5rem;
+  width: 1.5rem;
 }
 #dashboard #sidebar nav {
-  position: fixed;
+  position: sticky;
+  top: 3.5rem;
 }
 #dashboard #sidebar nav h1 {
   margin-top: 5px;
+}
+#dashboard #sidebar nav h1:hover {
+  opacity: 0.8;
+  transition: 0.3s;
 }
 #dashboard #sidebar nav h1, #dashboard #sidebar nav a {
   color: var(--contrast-color);
@@ -38,38 +43,42 @@
   border-radius: 10px;
 }
 #dashboard #sidebar nav ul li svg {
-  margin: 0rem 0.5rem;
   color: var(--main-color);
 }
 #dashboard #sidebar nav ul li:hover {
-  background-color: var(--bg-secondary-color);
+  background-color: var(--bg-main-color);
   transition: 0.3s;
 }
 #dashboard #sidebar nav ul li:hover svg {
   color: var(--main-secondary-color);
+  transition: 0.3s;
 }
 #dashboard main {
   width: 100%;
+  padding: 3.5rem 2rem;
+  height: 150vh;
 }
 
 @media (max-width: 769px) {
+  #toogle-sidebar {
+    left: 1.5rem !important;
+  }
+  #theme-btn {
+    right: 1.5rem !important;
+  }
   #dashboard #sidebar {
-    background: var(--bg-main-color);
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: fixed;
     z-index: 1;
-    min-height: 100%;
-    margin: 0rem;
-    padding: 1rem;
-    border: none;
+  }
+  #dashboard #sidebar nav {
+    min-height: none;
   }
   #dashboard #toogle-sidebar {
     display: block;
   }
   #dashboard #sidebar, #dashboard main {
     width: 100%;
-    padding-top: 4rem;
+    padding: 4.5rem 1.5rem 1.5rem 1.5rem;
   }
   #dashboard main {
     z-index: 0;
@@ -80,12 +89,12 @@
 }
 #login {
   min-height: 100vh;
-  padding: 2rem;
 }
 #login section {
+  margin: 1.5rem;
   padding: 1.5rem;
   max-width: 450px;
-  border-radius: 15px;
+  border-radius: 20px;
   box-shadow: 0px 0px 5px var(--shadow-color);
   background-color: var(--bg-secondary-color);
 }
@@ -145,7 +154,7 @@
   justify-content: center;
 }
 
-.btn, button, .btn-sm, .btn-bg {
+.btn, .btn-sm, .btn-lg {
   margin: 10px;
   padding: 10px 20px;
   border: none;
@@ -155,23 +164,24 @@
   background-color: var(--main-color);
   cursor: pointer;
   text-decoration: none;
+  font-size: 0.9em;
 }
-.btn:hover, button:hover, .btn-sm:hover, .btn-bg:hover {
+.btn:hover, .btn-sm:hover, .btn-lg:hover {
   padding: 10px 30px;
   background-color: var(--main-secondary-color);
   transition: 0.4s;
 }
 
-.btn-bg {
-  font-size: 1.1em;
+.btn-lg {
+  font-size: 1em;
   padding: 12px 24px;
 }
-.btn-bg:hover {
+.btn-lg:hover {
   padding: 12px 36px;
 }
 
 .btn-sm {
-  font-size: 0.9em;
+  font-size: 0.8em;
   margin: 5px;
   padding: 5px 10px;
 }
@@ -183,6 +193,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: monospace;
 }
 
 html {
@@ -190,21 +201,20 @@ html {
 }
 
 body {
-  font-family: monospace;
   color: var(--contrast-color);
   background: var(--bg-main-color) !important;
   min-height: 100vh;
 }
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 12px;
 }
 
-body::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background: var(--bg-secondary-color);
 }
 
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background-color: var(--main-color);
   border-radius: 20px;
   border: 1px solid var(--bg-secondary-color);
@@ -250,8 +260,8 @@ label {
 
 #theme-btn, #toogle-sidebar {
   position: absolute;
-  top: 1rem;
-  font-size: 1.2rem;
+  top: 1.5rem;
+  font-size: 1.3rem;
   cursor: pointer;
   z-index: 2;
 }
@@ -261,12 +271,12 @@ label {
 }
 
 #toogle-sidebar {
-  left: 1rem;
+  left: 2rem;
   display: none;
 }
 
 #theme-btn {
-  right: 1rem;
+  right: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

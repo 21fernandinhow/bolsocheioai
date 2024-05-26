@@ -1,22 +1,24 @@
 @media (max-width: 769px) {
+    #toogle-sidebar{
+        left: 1.5rem !important;
+    }
+    #theme-btn{
+        right: 1.5rem !important;
+    }
     #dashboard{
         #sidebar{
-            background: var(--bg-main-color);
-            position: absolute;
-            top: 0;
-            left: 0;
+            position: fixed;
             z-index: 1;
-            min-height: 100%;
-            margin: 0rem;
-            padding: 1rem;
-            border: none;
+            nav{
+                min-height: none;
+            }
         }
         #toogle-sidebar{
             display: block;
         }
         #sidebar, main{
             width: 100%;
-            padding-top: 4rem;
+            padding: 4.5rem 1.5rem 1.5rem 1.5rem;
         }
         main{
             z-index: 0;

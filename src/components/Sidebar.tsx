@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link";
 import { signOut } from "next-auth/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faChartSimple, faHouse, faNewspaper } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faChartSimple, faHouse, faNewspaper, faRightFromBracket, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 export default function Sidebar() {
@@ -25,17 +25,20 @@ export default function Sidebar() {
                     </div>
 
                     <ul>
-                        <Link href="/"><li> <FontAwesomeIcon icon={faHouse} /> Início</li></Link>
-                        <Link href="/"><li> <FontAwesomeIcon icon={faChartSimple} /> Inscritos</li></Link>
-                        <Link href="/"><li> <FontAwesomeIcon icon={faNewspaper} /> Posts</li></Link>
+                        <Link href="/"> <li> <FontAwesomeIcon icon={faHouse} /> Início </li> </Link>
+                        <Link href="/"> <li> <FontAwesomeIcon icon={faChartSimple} /> Inscritos </li> </Link>
+                        <Link href="/"> <li> <FontAwesomeIcon icon={faNewspaper} /> Posts </li> </Link>
                     </ul>
                     
-                    <button onClick={() => signOut()}> Sair </button>
+                    <button onClick={() => signOut()} className="btn"> Sair <FontAwesomeIcon icon={faRightFromBracket} /> </button>
 
                 </nav>
             </aside>
 
-            <FontAwesomeIcon id="toogle-sidebar" icon={faBars} onClick={() => setShowOnMobile(!showOnMobile)}/>
+            <span id="toogle-sidebar" onClick={() => setShowOnMobile(!showOnMobile)}>
+                {showOnMobile ? <FontAwesomeIcon icon={faXmark}/> : <FontAwesomeIcon icon={faBars}/>}
+                
+            </span>
         </>
         
     )

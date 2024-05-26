@@ -1,11 +1,11 @@
 #login{
     @extend .flex-central;
     min-height: 100vh;
-    padding: 2rem;
     section{
+        margin: 1.5rem;
         padding: 1.5rem;
         max-width: 450px;
-        border-radius: 15px;
+        border-radius: 20px;
         box-shadow: 0px 0px 5px var(--shadow-color);
         background-color: var(--bg-secondary-color);
         h1{
