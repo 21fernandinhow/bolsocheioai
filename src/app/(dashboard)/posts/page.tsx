@@ -19,7 +19,7 @@ export async function getPosts() {
   }
 };
 
-export default function Posts() {
+export function Posts() {
 
     return (
       <section>

@@ -19,7 +19,7 @@ export async function getLeads() {
   }
 };
 
-export default function Leads() {
+export function Leads() {
 
     return (
       <section>
