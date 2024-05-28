@@ -18,7 +18,7 @@ export default function Sidebar() {
                 <nav onClick={() => setShowOnMobile(!showOnMobile)}>  
 
                     <div className="brand">
-                        <Link href="/">
+                        <Link href="https://bolsocheio.ai" target="_blank" rel="noopener noreferrer">
                             <Image src={'/logo.png'} width={90} height={60} alt={"Bol$o Cheio AI"} />
                             <h1>Bolso Cheio A.I.</h1>
                         </Link>
