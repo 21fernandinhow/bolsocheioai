@@ -20,9 +20,10 @@ const handler = NextAuth({
         })
 
         const user = await res.json()
+        user.user.name = user.user.username
 
         if (res.ok && user) {
-          return user
+          return user.user
         }
         
         return null
