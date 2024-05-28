@@ -1,8 +1,14 @@
 //Imports
 @import './template/layout.scss';
+@import './template/grid.scss';
 @import './template/responsivity.scss';
+@import './template/general-itens.scss';
 @import './pages/login.scss';
 @import './pages/404.scss';
+@import './components/buttons.scss';
+@import './components/number-data-resume.scss';
+@import './components/external-actions.scss';
+@import './components/next-posts.scss';
 
 //Colors
 :root{
@@ -20,130 +26,4 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.btn{
-    margin: 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 15px;
-    font-weight: bold;
-    color: var(--bg-secondary-color);
-    background-color: var(--main-color);
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 0.9em;
-    &:hover{
-        padding: 10px 30px;
-        background-color: var(--main-secondary-color);
-        transition: 0.4s;
-    }
-}
-
-.btn-lg{
-    @extend .btn;
-    font-size: 1em;
-    padding: 12px 24px;
-    &:hover{
-        padding: 12px 36px;
-    }
-}
-
-.btn-sm{
-    @extend .btn;
-    font-size: 0.8em;
-    margin: 5px;
-    padding: 5px 10px;
-    &:hover{
-        padding: 5px 15px;
-    }
-}
-
-//General Customizing
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: monospace;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body{
-    color: var(--contrast-color);
-    background: var(--bg-main-color) !important;
-    min-height: 100vh;
-}
-
-::-webkit-scrollbar {
-    width: 12px;               
-}
-::-webkit-scrollbar-track {
-    background: var(--bg-secondary-color);        
-}  
-::-webkit-scrollbar-thumb {
-    background-color: var(--main-color);    
-    border-radius: 20px;      
-    border: 1px solid var(--bg-secondary-color); 
-}
-
-::selection{
-    background-color: var(--main-color);
-    color: var(--bg-main-color);
-}
-
-hr{
-    border-color: none;
-    border-top: 1px solid var(--main-secondary-color);
-    margin: 1rem;
-}
-
-input{
-    padding: 10px 20px;
-}
-
-input, textarea{
-    color: var(--contrast-color);
-    border: 1px solid var(--main-color);
-    border-radius: 15px;
-    font-weight: bold;
-    background: none;
-    &::placeholder{
-        color: var(--contrast-color);
-        opacity: 0.8;
-    }
-    &:focus{
-        outline: none;
-    }
-}
-
-textarea{
-    resize: none;
-}
-
-label{
-    cursor: pointer;
-}
-
-#theme-btn, #toogle-sidebar{
-    position: absolute;
-    top: 1.5rem;
-    font-size: 1.3rem;
-    cursor: pointer;
-    z-index: 2;
-    &:hover{
-        color: var(--main-color);
-        transition: 0.3s;
-    }
-}
-
-#toogle-sidebar{
-    left: 2rem;
-    display: none;
-}
-
-#theme-btn{
-    right: 2rem;
 }

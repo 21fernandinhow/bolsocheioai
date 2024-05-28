@@ -1,0 +1,14 @@
+.external-actions{
+    @extend .flex-central;
+    flex-direction: column;
+    text-align: center;
+    ul{
+        margin: 0;
+        li{
+            margin: 2rem 0rem;
+            a{
+                margin: 0;
+            }
+        }
+    }
+}

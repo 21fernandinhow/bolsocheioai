@@ -1,0 +1,33 @@
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    .col{
+        display: flex;
+        flex-direction: column;
+        .item-box{
+            height: 100%;
+            margin: 1.5rem;
+            padding: 1.5rem;
+            border: 1px solid var(--main-color);
+            border-radius: 20px;
+            &:hover{
+                box-shadow: 1px 2px 2px var(--shadow-color);
+                transition: 0.3s;
+            }
+        }
+    }
+    .col-sm{
+        flex-grow: 1;
+    }
+    .col-md{
+        flex-grow: 2;
+    }
+    .col-lg{
+        flex-grow: 3;
+    }
+    .col-full{
+        flex-grow: 4;
+        width: 100%;
+    }
+}

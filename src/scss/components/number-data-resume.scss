@@ -1,0 +1,9 @@
+.number-data-resume{
+    @extend .flex-central;
+    flex-direction: column;
+    text-align: center;
+    span{
+        color: var(--main-color);
+        font-size: 5.5rem;
+    }
+}

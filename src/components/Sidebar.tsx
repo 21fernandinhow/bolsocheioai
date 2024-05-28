@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link";
 import { signOut } from "next-auth/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faChartSimple, faHouse, faNewspaper, faRightFromBracket, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faHouse, faChartSimple, faNewspaper, faRightFromBracket, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 export default function Sidebar() {
@@ -37,7 +37,6 @@ export default function Sidebar() {
 
             <span id="toogle-sidebar" onClick={() => setShowOnMobile(!showOnMobile)}>
                 {showOnMobile ? <FontAwesomeIcon icon={faXmark}/> : <FontAwesomeIcon icon={faBars}/>}
-                
             </span>
         </>
         
