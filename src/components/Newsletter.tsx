@@ -53,7 +53,7 @@ export default function Newsletter() {
 
                         <input type="email" placeholder="E-mail" id="email" onChange={(e) => setEmail(e.target.value.slice(0, 50))} required />
 
-                        <button type="submit">Enviar</button>
+                        <button type="submit">Cadastrar</button>
 
                     </form>
                     {
