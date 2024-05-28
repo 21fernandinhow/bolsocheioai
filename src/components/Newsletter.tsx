@@ -7,7 +7,6 @@ import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 export default function Newsletter() {
 
-    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [subscribed, setSubscribed] = useState(false);
     const [subscribeError, setSubscribeError] = useState(false);
@@ -22,7 +21,6 @@ export default function Newsletter() {
               'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-              name: name,
               email: email,
             }),
         })
@@ -48,13 +46,12 @@ export default function Newsletter() {
                 : 
                 <>
                     <h2>Inscreva-se em nossa Newsletter gratuita!</h2>
-                    <p>Receba todos os conteúdos do Bolso Cheio A.I direto em seu email, <br/> todas as terças-feiras, as 10:30 da manhã.</p>
+                    <p>Cadastre seu melhor email e receba todos os conteúdos do Bolso Cheio A.I direto em seu email, <br/> 
+                    todas as terças-feiras, as 10:30 da manhã.</p>
                     
                     <form onSubmit={handleSubmit}>
 
-                        <input type="text" placeholder="Nome" id="name" onChange={(e) => setName(e.target.value)} required />
-
-                        <input type="email" placeholder="E-mail" id="email" onChange={(e) => setEmail(e.target.value)} required />
+                        <input type="email" placeholder="E-mail" id="email" onChange={(e) => setEmail(e.target.value.slice(0, 50))} required />
 
                         <button type="submit">Enviar</button>
 

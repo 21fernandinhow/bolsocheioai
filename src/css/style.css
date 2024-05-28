@@ -93,7 +93,7 @@ main #newsletter form input {
   border-radius: 15px;
   font-weight: bold;
   background-color: var(--bg-main-color);
-  max-width: 18em;
+  width: 25em;
 }
 main #newsletter form input:focus {
   outline: none;
@@ -129,6 +129,9 @@ footer h4 a:hover {
   #home .posts .post-box {
     max-width: 100% !important;
   }
+  #newsletter form input {
+    width: 16em !important;
+  }
 }
 #home {
   flex-direction: column;
@@ -163,7 +166,7 @@ footer h4 a:hover {
 #home .posts {
   margin-top: 0px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: stretch;
   flex-wrap: wrap;
   width: 100%;
