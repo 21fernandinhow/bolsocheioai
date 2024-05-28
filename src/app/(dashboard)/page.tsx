@@ -1,6 +1,6 @@
 import NumberDataResume from "@/components/NumberDataResume";
-import { getLeads } from "./leads/page";
-import { getPosts } from "./posts/page";
+import { getLeads } from "@/utilities/getLeads";
+import { getPosts } from "@/utilities/getPosts";
 import ExternalActions from "@/components/ExternalActions";
 import NextPosts from "@/components/NextPosts";
 import { getServerSession } from "next-auth";
