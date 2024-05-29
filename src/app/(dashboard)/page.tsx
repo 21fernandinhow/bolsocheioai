@@ -12,7 +12,7 @@ export default async function Home() {
   const session = await getServerSession()
 
   return (
-    <div id="home">
+    <>
       <h1 className="title">Bem-vindo, {session?.user?.name}</h1>
 
       <div className="row">
@@ -28,6 +28,6 @@ export default async function Home() {
         </div>
 
       </div>
-    </div>
+    </>
   )
 }

@@ -3,13 +3,11 @@
     align-items: stretch;
 
     #sidebar{
-        min-width: 280px;
+        width: 250px;
         background-color: var(--bg-secondary-color);
         box-shadow: 0px 0px 10px var(--shadow-color);
         padding: 0rem 2rem;
         min-height: 100vh;
-        // border-radius: 0px 20px 20px 0px;
-        // margin: 1vh 0rem;
 
         svg{
             margin: 0rem 0.5rem;
@@ -37,6 +35,8 @@
                 margin: 20px 0rem;
                 list-style: none;
                 li{
+                    display: flex;
+                    flex-wrap: nowrap;
                     width: 100%;
                     margin-top: 0.5rem;
                     padding: 0.7rem 2rem 0.7rem 0.5rem;
@@ -59,7 +59,7 @@
     }
 
     main{
-        width: 100%;
+        width: 75vw;
         padding: 3.5rem 2rem;
         .title{
             margin-left: 2rem;
