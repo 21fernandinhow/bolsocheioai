@@ -1,14 +1,17 @@
-.btn{
+.btn, .btn-outline{
     margin: 10px;
     padding: 10px 20px;
-    border: none;
     border-radius: 15px;
-    font-weight: bold;
-    color: var(--bg-secondary-color);
-    background-color: var(--main-color);
     cursor: pointer;
     text-decoration: none;
     font-size: 0.9em;
+    font-weight: bold;
+}
+
+.btn{
+    border: none;
+    color: var(--bg-secondary-color);
+    background-color: var(--main-color);
     &:hover{
         padding: 10px 30px;
         background-color: var(--main-secondary-color);
@@ -16,9 +19,34 @@
     }
 }
 
-.btn-lg{
-    @extend .btn;
+.btn-outline{
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    background: none;
+    &:hover{
+        background: var(--main-color);
+        color: var(--bg-secondary-color);
+        transition: 0.3s
+    }
+}
+
+.btn-outline-lg, .btn-lg{
     font-size: 1em;
+}
+
+.btn-outline-lg, .btn-sm{
+    font-size: 0.8em;
+}
+
+.btn-outline-lg, .btn-outline--sm{
+    @extend .btn-outline;
+}
+
+.btn-lg, .btn-sm{
+    @extend .btn;
+}
+
+.btn-lg{
     padding: 12px 24px;
     &:hover{
         padding: 12px 36px;
@@ -26,8 +54,6 @@
 }
 
 .btn-sm{
-    @extend .btn;
-    font-size: 0.8em;
     margin: 5px;
     padding: 5px 10px;
     &:hover{

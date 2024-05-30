@@ -6,7 +6,7 @@ export async function getPosts() {
             'Content-Type': 'application/json',
             'x-api-key': `${process.env.NEXT_PUBLIC_API_KEY}`,
         },
-        next: { revalidate: 300 }
+        cache: 'no-store'
       });
   
       if (!response.ok) {

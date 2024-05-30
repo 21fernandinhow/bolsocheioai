@@ -1,4 +1,8 @@
 @media (max-width: 769px) {
+    .title{
+        font-size: 2.5rem !important;
+        word-break: break-word;
+    }
     #toogle-sidebar{
         left: 1.5rem !important;
     }
