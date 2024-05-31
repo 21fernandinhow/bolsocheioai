@@ -23,7 +23,6 @@
             .table-body{
                 .table-cel{
                     &:hover{
-                        color: var(--main-secondary-color);
                         font-weight: bold;
                         transition: 0.3s;
                     }

@@ -128,6 +128,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: monospace;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 html {
@@ -142,22 +145,18 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 11px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-secondary-color);
   border-radius: 20px;
-}
-
-body::-webkit-scrollbar-track {
-  border-radius: 0px;
+  margin: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--main-color);
   border-radius: 20px;
-  border: 1px solid var(--bg-secondary-color);
+  border: 2px solid var(--bg-secondary-color);
 }
 
 ::selection {
@@ -240,6 +239,11 @@ label {
 
 .action-item {
   cursor: pointer;
+  padding: 0rem 0.5rem;
+}
+.action-item:hover {
+  color: var(--main-color);
+  transition: 0.3s;
 }
 
 #login {
@@ -413,7 +417,6 @@ label {
   padding-right: 0.5rem;
 }
 .table .table-content .table-col .table-body .table-cel:hover {
-  color: var(--main-secondary-color);
   font-weight: bold;
   transition: 0.3s;
 }
@@ -432,33 +435,47 @@ label {
 }
 
 .dialog-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   padding: 1.5rem;
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
   background: rgba(0, 0, 0, 0.3);
   z-index: 999;
 }
 
 .dialog-content {
-  flex-grow: 1;
-  max-width: 450px;
-  max-height: 80vw;
+  flex-basis: 450px;
+  max-height: 80vh;
   padding: 1.5rem;
   background-color: var(--bg-secondary-color);
   box-shadow: 0px 0px 5px var(--shadow-color);
   color: var(--contrast-color);
   border-radius: 15px;
-  overflow: auto;
 }
 .dialog-content .dialog-actions {
   margin-top: 1rem;
 }
 .dialog-content .dialog-actions .btn:first-child, .dialog-content .dialog-actions .btn-lg:first-child, .dialog-content .dialog-actions .btn-sm:first-child, .dialog-content .dialog-actions .btn-outline:first-child, .dialog-content .dialog-actions .btn-outline-lg:first-child, .dialog-content .dialog-actions .btn-outline--sm:first-child {
   margin-left: 0;
+}
+
+#edit-post-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+#edit-post-form input, #edit-post-form textarea {
+  width: 100%;
+  font-weight: 400;
+}
+#edit-post-form textarea {
+  padding: 1rem;
+}
+#edit-post-form label {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 :root {

@@ -13,12 +13,11 @@ export default function DeleteItem({selector, endpoint}){
     const handleDelete = async () => {
         try {
             const response = await fetch(`${endpoint}/${selector}`, {
-            method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json',
-                'x-api-key': `${process.env.NEXT_PUBLIC_API_KEY}`,
-            },
-            next: { revalidate: 300 }
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'x-api-key': `${process.env.NEXT_PUBLIC_API_KEY}`,
+                },
             });
         
             if (!response.ok) {

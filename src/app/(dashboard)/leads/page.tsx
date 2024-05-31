@@ -5,7 +5,7 @@ import DeleteItem from "@/components/DeleteItem";
 export default async function Leads() {
 
   const leads = await getLeads()
-  const data = leads.map((lead: {_id: string, email: string, __v: number}) => (
+  const data = leads ? leads.map((lead: {_id: string, email: string, __v: number}) => (
     {
       email: lead.email, 
       actions: (
@@ -14,7 +14,7 @@ export default async function Leads() {
         </span>
       )
     }
-  ))
+  )) : []
   const columns = [{name: 'email', label: 'E-mail'}, {name: 'actions', label: 'Ações'}];
 
 

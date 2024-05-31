@@ -1,0 +1,16 @@
+#edit-post-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    input, textarea{
+        width: 100%;
+        font-weight: 400;
+    }
+    textarea{
+        padding: 1rem;
+    }
+    label{
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+}
