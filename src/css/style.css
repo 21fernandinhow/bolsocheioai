@@ -379,6 +379,11 @@ label {
 .next-posts .next-post-item h3 {
   color: var(--main-secondary-color);
 }
+.next-posts .next-post-item h3, .next-posts .next-post-item .keywords {
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .next-posts .next-post-item .keywords {
   flex-wrap: wrap;
 }

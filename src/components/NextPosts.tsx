@@ -29,7 +29,7 @@ export default async function NextPosts () {
                 <div key={index} className="next-post-item">
                     <h3 key={index}>{item.title}</h3>
                     <div className="keywords">
-                        {item.keywords.slice(0,4).map((keyword, index) => <span key={index}>{keyword}</span>)}
+                        {item.keywords.map((keyword, index) => <span key={index}>{keyword}</span>)}
                     </div>
                 </div>
             ))}

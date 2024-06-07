@@ -5,6 +5,11 @@
         h3{
             color: var(--main-secondary-color);
         }
+        h3, .keywords{
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
         .keywords{
             @extend .flex-central;
             flex-wrap: wrap;
