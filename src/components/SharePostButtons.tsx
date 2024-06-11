@@ -13,7 +13,7 @@ export type PostToShare = {
 export default function SharePostButtons ({id, title}: PostToShare){
 
     const postUrl = `https://bolsocheio.ai/posts/${id}`
-    const shareMessage = `Procurando dicas financeiras inteligentes? Não perca nosso novo artigo: ${title}. Acesse agora: ${postUrl}`
+    const shareMessage = `Esse post do Bolso Cheio A.I vai te interessar: *${title}*. Acesse agora: ${postUrl}`
 
     return (
         <div className='share-post'>
