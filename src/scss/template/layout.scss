@@ -75,13 +75,15 @@ main{
         @extend .flex-central;
         flex-direction: column;
         background-color: var(--bg-secondary-color);
-        h2,p{
+        h2,h3, p{
             margin: 10px;
             text-align: center;
         }
+        h2, h3{
+            color: var(--main-secondary-color);
+        }
         h2{
             font-size: 2em;
-            color: var(--main-secondary-color);
         }
         p{
             font-size: 1.1em;

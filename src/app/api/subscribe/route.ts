@@ -1,6 +1,6 @@
 export async function POST(req: Request){
 
-    const { name, email } = await req.json()
+    const { email } = await req.json()
 
     const response = await fetch(`${process.env.NEXT_PUBLIC_LEADS_URL}`, {
         method: 'POST',
@@ -9,7 +9,6 @@ export async function POST(req: Request){
           'x-api-key': `${process.env.NEXT_PUBLIC_API_KEY}`,
         },
         body: JSON.stringify({
-          name: name,
           email: email,
         }),
     })

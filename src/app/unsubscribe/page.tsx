@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import { useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,20 +6,18 @@ import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 import { usePathname } from "next/navigation";
 
-export default function Newsletter() {
-
-    const isOnUnsubscribePage = usePathname().includes("unsubscribe")
+export default function Unsubscribe () {
 
     const [email, setEmail] = useState('');
-    const [subscribed, setSubscribed] = useState(false);
-    const [subscribeError, setSubscribeError] = useState(false);
+    const [unsubscribed, setUnsubscribed] = useState(false);
+    const [unsubscribeError, setUnsubscribeError] = useState(false);
 
     const handleSubmit = async (event: any) => {
 
         event.preventDefault()
 
-        const response = await fetch('/api/subscribe', {
-            method: 'POST',
+        const response = await fetch('/api/unsubscribe', {
+            method: 'DELETE',
             headers: {
               'Content-Type': 'application/json',
             },
@@ -29,43 +27,37 @@ export default function Newsletter() {
         })
 
         if(response.status === 200){
-            setSubscribed(true)
+            setUnsubscribed(true)
         } else {
-            setSubscribeError(true)
+            setUnsubscribeError(true)
         }
         
     }
-    
-    if(isOnUnsubscribePage){
-        return null
-    }
-    
-    return(
+
+    return (
         <section id="newsletter">
             {
-                subscribed ?
+                unsubscribed ?
                 <>
-                    <h2>Inscrição realizada com sucesso!</h2>
+                    <h3>Inscrição removida com sucesso!</h3>
                     <FontAwesomeIcon icon={faCircleCheck} className="success-icon"/>
-                    <p>Muito obrigado por se inscrever em nossa newsletter!</p>
-                    <p>Agora você receberá semanalmente os nossos conteúdos em sua caixa de emails.</p>
+                    <p>Você não irá mais receber nossos conteúdos.</p>
                 </>
                 : 
                 <>
-                    <h2>Inscreva-se em nossa Newsletter gratuita!</h2>
-                    <p>Cadastre seu melhor email e receba todos os conteúdos do Bolso Cheio A.I direto em seu email, <br/> 
-                    todas as terças-feiras, as 10:30 da manhã.</p>
+                    <h3>Insira seu email abaixo para cancelar sua inscrição em nossa newsletter</h3>
+                    <p>Uma pena a sua partida, você pode voltar quando desejar.</p>
                     
                     <form onSubmit={handleSubmit}>
 
                         <input type="email" placeholder="E-mail" id="email" onChange={(e) => setEmail(e.target.value.slice(0, 50))} required />
 
-                        <button type="submit">Cadastrar</button>
+                        <button type="submit">Cancelar</button>
 
                     </form>
                     {
-                        subscribeError ?
-                        <h4 className="error-message"><FontAwesomeIcon icon={faCircleXmark} /> Erro ao efetuar inscrição. Atualize a página e tente novamente</h4>
+                        unsubscribeError ?
+                        <h4 className="error-message"><FontAwesomeIcon icon={faCircleXmark} /> Erro ao cancelar inscrição. Atualize a página e tente novamente</h4>
                         :
                         null
                     }

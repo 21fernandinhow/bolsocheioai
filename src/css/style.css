@@ -72,13 +72,15 @@ main #newsletter {
   flex-direction: column;
   background-color: var(--bg-secondary-color);
 }
-main #newsletter h2, main #newsletter p {
+main #newsletter h2, main #newsletter h3, main #newsletter p {
   margin: 10px;
   text-align: center;
 }
+main #newsletter h2, main #newsletter h3 {
+  color: var(--main-secondary-color);
+}
 main #newsletter h2 {
   font-size: 2em;
-  color: var(--main-secondary-color);
 }
 main #newsletter p {
   font-size: 1.1em;

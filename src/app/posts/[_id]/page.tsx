@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation';
 import SharePostButtons from '@/components/SharePostButtons';
-import { PostToShare } from '@/components/SharePostButtons';
 
 export async function generateMetadata({ params }: { params: { _id: string }}):Promise<Metadata>{
 
