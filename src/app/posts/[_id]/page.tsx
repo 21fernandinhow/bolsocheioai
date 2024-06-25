@@ -20,7 +20,7 @@ async function getPostById(_id:string) {
             'Content-Type': 'application/json',
             'x-api-key': `${process.env.NEXT_PUBLIC_API_KEY}`,
         },
-        next: {revalidate: 300}
+        next: {revalidate: 1800} // half a hour
     });
   
     if (!response.ok) {
