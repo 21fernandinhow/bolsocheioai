@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation';
 import SharePostButtons from '@/components/SharePostButtons';
+import { formatText } from '@/components/PostBox';
 
 export async function generateMetadata({ params }: { params: { _id: string }}):Promise<Metadata>{
 
@@ -34,10 +35,6 @@ export default async function PostPage({ params }: { params: { _id: string } }) 
 
     const post = await getPostById(params._id);
     const formattedDate = new Date(post.date).toLocaleDateString('pt-BR');
-    
-    const formatText = (text: string) => {
-        return text.replace(/\*{1,2}(.*?)\*{1,2}/g, '<strong>$1</strong>').replace(/###/g, "");
-    };
     
     return(
         <section id="post">
