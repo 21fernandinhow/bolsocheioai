@@ -22,10 +22,8 @@ async function fetchPosts() {
 export async function GET() {
   const baseUrl = 'https://bolsocheio.ai';
   
-  // Obtenha os posts do seu banco de dados ou fonte de dados.
   const posts = await fetchPosts()
 
-  // Gera o conteúdo do sitemap em XML.
   const sitemap = `
     <?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -51,7 +49,7 @@ export async function GET() {
         .map(
           (post: PostBoxProps) => `
         <url>
-          <loc>${baseUrl}/${post._id}</loc>
+          <loc>${baseUrl}/posts/${post._id}</loc>
           <lastmod>${post.date}</lastmod>
           <changefreq>weekly</changefreq>
           <priority>0.8</priority>
@@ -62,7 +60,6 @@ export async function GET() {
     </urlset>
   `.trim();
 
-  // Retorna o sitemap como resposta.
   return new NextResponse(sitemap, {
     headers: {
       'Content-Type': 'application/xml',
