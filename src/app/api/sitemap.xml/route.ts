@@ -1,8 +1,7 @@
 import { PostBoxProps } from '@/components/PostBox';
 import { NextResponse } from 'next/server';
 
-
-export async function getPosts() {
+export async function fetchPosts() {
 
   const response = await fetch(`${process.env.NEXT_PUBLIC_POSTS_URL}`, {
       method: 'GET',
@@ -24,7 +23,7 @@ export async function GET() {
   const baseUrl = 'https://bolsocheio.ai';
   
   // Obtenha os posts do seu banco de dados ou fonte de dados.
-  const posts = await getPosts()
+  const posts = await fetchPosts()
 
   // Gera o conteúdo do sitemap em XML.
   const sitemap = `
