@@ -1,7 +1,7 @@
 import { PostBoxProps } from '@/components/PostBox';
 import { NextResponse } from 'next/server';
 
-export async function fetchPosts() {
+async function fetchPosts() {
 
   const response = await fetch(`${process.env.NEXT_PUBLIC_POSTS_URL}`, {
       method: 'GET',
