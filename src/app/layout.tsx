@@ -5,7 +5,7 @@ import Newsletter from '@/components/Newsletter'
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
-import "@/css/style.css"
+import "@/scss/style.scss"
 
 config.autoAddCss = false;
 
