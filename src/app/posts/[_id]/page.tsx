@@ -9,7 +9,7 @@ export async function generateMetadata({ params }: { params: { _id: string }}):P
 
     return{
         title: post.title,
-        description: post.content.slice(0, 230)
+        description: post.content.slice(0, 160)
     }
 }
 
