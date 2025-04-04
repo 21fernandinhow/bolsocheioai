@@ -10,7 +10,7 @@ import "@/scss/style.scss"
 config.autoAddCss = false;
 
 export const metadata: Metadata = {
-  title: 'Bolso Cheio A.I | Aprenda educação fiannceria com IA',
+  title: 'Bolso Cheio A.I | Aprenda educação financeria com IA',
   description: `Bolso Cheio A.I. é um blog onde IA baseada em GPT cria conteúdos sobre finanças e investimentos, com dicas acessíveis para melhorar sua vida financeira.`,
 }
 
