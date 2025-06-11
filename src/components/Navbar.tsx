@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import ThemeButton from "./ThemeButton";
 
@@ -26,6 +26,11 @@ export default function Navbar() {
                         <li>
                             <Link href="https://www.instagram.com/bolsocheio.ai" target="_blank" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faInstagram} />
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="https://x.com/bolsocheioai" target="_blank" rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={faXTwitter} />
                             </Link>
                         </li>
                         <li>
